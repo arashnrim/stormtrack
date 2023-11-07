@@ -1,4 +1,4 @@
-# Stormtrack
+# stormtrack
 
 Welcome to the project repository for Stormtrack! Stormtrack is a simple project I made to keep track of the rainfall in my area and run an action on the device depending on the rainfall amount.
 
