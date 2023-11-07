@@ -21,7 +21,9 @@ def run_action(rainfall_amount):
         f.write(f"{datetime.now()},{rainfall_amount}\n")
     
     # Use sudo wisely: if you don't need it, don't use it.
-    os.system("sudo action.sh")
+    shell_file = "action.sh"
+    path = os.path.join(os.path.dirname(os.path.realpath(__file__)), shell_file)
+    os.system(f"sudo {path}")
 
 URL = "https://api.data.gov.sg/v1/environment/rainfall"
 response = requests.get(URL)
