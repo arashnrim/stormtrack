@@ -20,8 +20,8 @@ def run_action(rainfall_amount):
             f.write("datetime,rainfall\n")
         f.write(f"{datetime.now()},{rainfall_amount}\n")
     
-    # DANGER! This will shut down your computer!
-    os.system("sudo shutdown -h now")
+    # Use sudo wisely: if you don't need it, don't use it.
+    os.system("sudo action.sh")
 
 URL = "https://api.data.gov.sg/v1/environment/rainfall"
 response = requests.get(URL)
